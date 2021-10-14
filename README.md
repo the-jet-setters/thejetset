@@ -1,4 +1,4 @@
-<h1>the jet set</h1>
+<h1>The Jet Set</h1>
 <h4>Front End</h4>
 
 <h3>Tech Stack</h3>  
@@ -50,4 +50,3 @@ React App using Shopify API connectivity with fully functional searchability, lo
 <h3>Stretch Goal:</h3>
 - Wishlist </br>
 - Create a curated list for a client (similar to a wishlist) with functionality to send to client directly and assign to client. Client book with link to send to client directly.
-
