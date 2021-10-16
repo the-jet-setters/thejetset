@@ -14,6 +14,7 @@ export default function Home({products}) {
   
   
   return (
+
     <div className={styles.container}>
      <div className='container'>
 
@@ -41,3 +42,8 @@ export async function getServerSideProps() {
   // Pass data to the page via props
   return { props: { products: JSON.parse(JSON.stringify(products)) } }
 }
+  
+
+     
+
+
