@@ -6,7 +6,9 @@ export default function Home() {
   return (
     <div className={styles.container}>
     Jet Set
-     
+    
     </div>
+
+    
   )
 }
