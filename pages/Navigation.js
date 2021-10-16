@@ -16,12 +16,12 @@ function Navigation(props) {
         </div>
             <div className="directories">
                 <ul>
-                    <li><button>WOMENS</button> </li>
-                    <li><button>MENS</button></li>
-                    <li><button>KIDS</button></li>
-                    <li><button>ACCESSORIES</button> </li>
-                    <li><button>BRANDS</button></li>
-                    <li><button>BLOG</button></li>
+                    <li><button>NEW IN</button></li>
+                    <li><button>READY TO WEAR</button> </li>
+                    <li><button>COLLECTIONS</button></li>
+                    
+                   
+
                 </ul>
              </div>
 
