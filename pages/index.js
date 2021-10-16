@@ -9,6 +9,13 @@ export default function Home() {
   return (
     <div className={styles.container}>
 
+ 
+    
+
+
+    
+
+
     <Navigation />
     <LandingPage />
     <Footer />
@@ -17,5 +24,6 @@ export default function Home() {
         </div>
               
    
+
   )
 }
