@@ -12,9 +12,9 @@ import Checkout from './Checkout';
 
 
 
-import { client } from "../utils/shopify";
-import Link from 'next/link'
-import React,{useEffect , useState} from "react";
+
+
+
 
 
 
