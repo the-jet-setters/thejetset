@@ -38,23 +38,20 @@ export default function Home({products}) {
           )
         })}
       </div> */}
+       <Navigation />
+      <LandingPage />
 
     </div>
   );
     
-      <Navigation />
-      <LandingPage />
+     
 
       
 
       
   
 
-    </div>
-              
    
-
-  )
 }
 
 // This gets called on every request
