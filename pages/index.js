@@ -2,8 +2,10 @@ import styles from '../styles/Home.module.css'
 import Navigation from './Navigation';
 import LandingPage from './LandingPage';
 import Footer from './Footer';
-import Head from "next/head";
-import Image from "next/image";
+import Login from './Login';
+import Checkout from './Checkout';
+
+
 
 import { client } from "../utils/shopify";
 import Link from 'next/link'
@@ -18,22 +20,19 @@ export default function Home({products}) {
   
   
   return (
+
     <div className={styles.container}>
-      {/* <div>
-        {products.map(product =>{
-          return(
-            <Link key={product.id} href={`product/${product.id}`}>
-            <p key={product.id}>{product.title}</p></Link>
-          )
-        })}
-      </div> */}
-
-    <Navigation />
-    <LandingPage />
-    <Footer />
     
+      <Navigation />
+      <LandingPage />
 
-        </div>
+      <Login />
+      <Checkout />
+
+      <Footer />
+  
+
+    </div>
               
    
 
