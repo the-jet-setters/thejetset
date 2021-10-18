@@ -1,31 +1,49 @@
-
+import Link from 'next/link';
 
 
 function Navigation(props) {
     return (
         <div>
 
-        <div className="header">The Jet Setters</div>
+         <ul>
+             <li>
+                <Link href="/LandingPage">
+                <a>The Jet Setters</a>
+                </Link>
+            </li>
+            <li>
+                <Link href="/Collections">
+                <a>COLLECTIONS</a>
+                </Link>
+            </li>
+            <li>
+                <Link href="/NewIn">
+                <a>NEW IN</a>
+                </Link>
+            </li>
+            <li>
+                <Link href="/ReadyToWear">
+                <a>READY TO WEAR</a>
+                </Link>
+            </li>
+        </ul> 
 
-        <div className="navButtons">
-            <ul>
-                <li><button>Wish List</button> </li>
-                <li><button>Sign In</button></li>
-                <li><button>Cart</button></li>
-            </ul>
-        </div>
-            <div className="directories">
-                <ul>
-                    <li><button>NEW IN</button></li>
-                    <li><button>READY TO WEAR</button> </li>
-                    <li><button>COLLECTIONS</button></li>
-                    
-                   
+        --------------------------
 
-                </ul>
-             </div>
+        <ul>
+             <li>
+                <Link href="/Login">
+                <a>Sign in</a>
+                </Link>
+            </li>
+            <li>
+                <Link href="/Checkout">
+                <a>Check Out</a>
+                </Link>
+            </li>
+        </ul>
 
-            
+
         </div>
     );
 }

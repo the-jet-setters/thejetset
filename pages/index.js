@@ -4,17 +4,26 @@ import styles from '../styles/Home.module.css'
 import Navigation from './Navigation';
 import LandingPage from './LandingPage';
 import Footer from './Footer';
+import Login from './Login';
+import Checkout from './Checkout';
+
+
 
 export default function Home() {
   return (
+
     <div className={styles.container}>
-
-    <Navigation />
-    <LandingPage />
-    <Footer />
     
+      <Navigation />
+      <LandingPage />
 
-        </div>
+      <Login />
+      <Checkout />
+
+      <Footer />
+  
+
+    </div>
               
    
 
