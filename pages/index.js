@@ -30,6 +30,21 @@ export default function Home({products}) {
 
     </div>
   );
+    
+      <Navigation />
+      <LandingPage />
+
+      <Login />
+      <Checkout />
+
+      <Footer />
+  
+
+    </div>
+              
+   
+
+  )
 }
 
 // This gets called on every request
