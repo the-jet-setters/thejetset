@@ -73,12 +73,22 @@ function Footer(props) {
                     </li>
                     <li id="navi-1" className="leading-7 text-sm">
                         <a className="text-white no-underline text-small" href="/BuyerProtection">Subscribe Now</a>
-                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
-                        id="username" type="text" placeholder="Enter Your Email"></input>
-
+                        
+                        <div className="w-full max-w-sm flex items-center">
+                          
+                            <input className="bg-white h-7 px-4 pr-4 w-full mr-3 py-1 px-2 leading-tight" 
+                            id="username" type="text" placeholder="Enter Your Email"></input>
+                             
+                            <button className="flex-shrink-0 text-sm border-2 text-white py-2 px-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-2 w-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10.894 2.553a1 1 0 0 0-1.788 0l-7 14a1 1 0 0 0 1.169 1.409l5-1.429A1 1 0 0 0 9 15.571V11a1 1 0 1 1 2 0v4.571a1 1 0 0 0 .725.962l5 1.428a1 1 0 0 0 1.17-1.408l-7-14z"/></svg>
+                            </button>
+                            
+                        </div>
+                       
                     </li>
                 </ul>
-            </div>
+            </div>       
             
         </div>
         
