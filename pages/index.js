@@ -34,10 +34,9 @@ export default function Home({products}) {
       <Navigation />
       <LandingPage />
 
-      <Login />
-      <Checkout />
+      
 
-      <Footer />
+      
   
 
     </div>
@@ -57,8 +56,7 @@ export async function getServerSideProps() {
   // Pass data to the page via props
   return { props: { products: JSON.parse(JSON.stringify(products)) } }
 }
-  
-
+    
      
 
 
