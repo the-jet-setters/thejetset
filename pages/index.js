@@ -4,6 +4,17 @@ import styles from "../styles/Home.module.css";
 import { client } from "../utils/shopify";
 import Link from 'next/link'
 import React,{useEffect , useState} from "react";
+import Navigation from './Navigation';
+import LandingPage from './LandingPage';
+import Footer from './Footer';
+import Login from './Login';
+import Checkout from './Checkout';
+
+
+
+
+
+
 
 
 
