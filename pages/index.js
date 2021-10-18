@@ -1,4 +1,9 @@
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import { client } from "../utils/shopify";
+import Link from 'next/link'
+import React,{useEffect , useState} from "react";
 import Navigation from './Navigation';
 import LandingPage from './LandingPage';
 import Footer from './Footer';
@@ -22,14 +27,23 @@ export default function Home({products}) {
   return (
 
     <div className={styles.container}>
-    
-      <Navigation />
+     <div className='container'>
+
+     </div>
+     {/* <div>
+        {products.map(product =>{
+          return(
+            <Link key={product.id} href={`product/${product.id}`}>
+            <p key={product.id}>{product.title}</p></Link>
+          )
+        })}
+      </div> */}
+       
       <LandingPage />
 
-      <Login />
-      <Checkout />
+      
 
-      <Footer />
+      
   
 
     </div>
@@ -49,3 +63,7 @@ export async function getServerSideProps() {
   // Pass data to the page via props
   return { props: { products: JSON.parse(JSON.stringify(products)) } }
 }
+    
+     
+
+
