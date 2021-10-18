@@ -38,7 +38,7 @@ export default function Home({products}) {
           )
         })}
       </div> */}
-       <Navigation />
+       
       <LandingPage />
 
     </div>
