@@ -31,21 +31,21 @@ export default function Home({products}) {
      <div className='container'>
 
      </div>
-     {/* <div>
-        {products.map(product =>{
+     <div>
+        {/* {products.map(product =>{
           return(
             <Link key={product.id} href={`product/${product.id}`}>
             <p key={product.id}>{product.title}</p></Link>
           )
-        })}
-      </div> */}
+        })} */}
+      </div>
        
       <LandingPage />
 
+      <Login />
+
     </div>
   );
-    
-     
 
       
 
