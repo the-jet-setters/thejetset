@@ -1,12 +1,35 @@
 import { useRouter } from 'next/router'
 import { client } from '../../utils/shopify'
+import Image from 'next/image'
 
 const Post = ({product}) => {
   
   
       
-  return <p key={product.id}>Post: {product.title}</p>
+  return <div key={product.id}>
+  
+  <div>
+    <h1> {product.title}</h1>
+    <h1>$ {product.variants[0].price}</h1>
+    <p>{product.description}</p>
+    <Image
+    
+   src={product.images[0].src}
+   alt={product.imageAlt}
+   width={550}
+   height={750}
+    
+    />
+  </div>
+  </div>
+      
 }
+
+
+
+
+
+
 
 export async function getServerSideProps({ query }) {
   const productId = query.productId
