@@ -26,6 +26,7 @@ export default function Home({products}) {
   
   return (
 
+
     <div className={styles.container}>
      <div className='container'>
 
@@ -50,6 +51,19 @@ export default function Home({products}) {
 
       
   
+
+    <div className={styles.container}>
+    
+      <Navigation />
+      <LandingPage />
+
+      <Login />
+      <Checkout />
+
+      <Footer />
+  
+
+    </div>
 
    
 }
