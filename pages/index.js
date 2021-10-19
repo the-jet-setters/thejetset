@@ -42,7 +42,6 @@ export default function Home({products}) {
        
       <LandingPage />
 
-      <Login />
 
     </div>
   );
