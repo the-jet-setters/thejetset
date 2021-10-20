@@ -61,11 +61,6 @@ export default function Home({products,collections}) {
     </div>
   );
 
-      
-
-      
-  
-
     
 
       <Navigation />

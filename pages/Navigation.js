@@ -8,13 +8,16 @@ function Navigation(props) {
     return (
         <div>
             <div className="header">
-                <ul>
+                <ol>
                     <li>
                         <Link href="/LandingPage">
                         <a>The Jet Setters</a>
                         </Link>
+
+                        <div className="solid"> </div>
         <div className="iconDirectories">
-            <ul>
+            <ol>
+        
                 <li>
                     <Link href="/Wishlist">
                     <a><FaHeart/>Wish List</a>
@@ -30,13 +33,14 @@ function Navigation(props) {
                     <a><FaShoppingCart/>Cart</a>
                     </Link>
                 </li>
-            </ul>
+          
+            </ol>
         </div>
                     </li>
-                </ul>
+                </ol>
             </div>
             <div className="directories">
-                <ul>
+                <ol>
                     <li>
                         <Link href="/Collections">
                         <a>COLLECTIONS</a>
@@ -52,7 +56,7 @@ function Navigation(props) {
                         <a>READY TO WEAR</a>
                         </Link>
                     </li>
-                </ul> 
+                </ol> 
             </div>
     </div>
     );
