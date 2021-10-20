@@ -34,7 +34,7 @@ function LandingPage({products,collections}) {
  />
 </div>
 </Link>
-<h2 className="mt-4 text-xl font-serif text-black font-semibold ">{product.title}</h2>
+<h2 className="mt-4 text-xl font-serif text-black font-semibold tracking-wide">{product.title}</h2>
 <p className="mt-2 text-lg font-medium font-serif text-black">$ {product.variants[0].price}</p>
 <button className='w-full bg-black text-white py-2 mt-4 font-serif hover:bg-gray-600'> ADD TO CART</button>
 
