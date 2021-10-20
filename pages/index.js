@@ -35,9 +35,13 @@ export default function Home({products,collections}) {
      <div className='container'>
 
      </div>
+
+     {/* <div>
+
      <div>
 
         {/* {products.map(product =>{
+
 
         {products.map(product =>{
 
@@ -50,7 +54,7 @@ export default function Home({products,collections}) {
       </div>
 
         })}
-      </div>
+      </div> */}
 
 
        

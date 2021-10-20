@@ -10,7 +10,7 @@ function Navigation(props) {
             <div className="header">
                 <ol>
                     <li>
-                        <Link href="/LandingPage">
+                        <Link href="/">
                         <a>The Jet Setters</a>
                         </Link>
 
@@ -56,7 +56,16 @@ function Navigation(props) {
                         <a>READY TO WEAR</a>
                         </Link>
                     </li>
+
+                    <li>
+                        <Link href="/AllProducts">
+                        <a>All PRODUCTS</a>
+                        </Link>
+                    </li>
+                </ul> 
+
                 </ol> 
+
             </div>
     </div>
     );
