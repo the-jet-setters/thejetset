@@ -4,11 +4,12 @@ import styles from "../styles/Home.module.css";
 import { client } from "../utils/shopify";
 import Link from 'next/link'
 import React,{useEffect , useState} from "react";
-import Navigation from './Navigation';
 import LandingPage from './LandingPage';
+
 import Footer from './Footer';
 import Login from './Login';
 import Checkout from './Checkout';
+import NewAccount from './NewAccount';
 
 
 
@@ -18,9 +19,12 @@ import Checkout from './Checkout';
 
 
 
-export default function Home({products}) {
+
+
+export default function Home({products,collections}) {
 
   console.log({products});
+  console.log({collections});
   
   
   
@@ -32,32 +36,45 @@ export default function Home({products}) {
 
      </div>
      <div>
+
+        {/* {products.map(product =>{
+
         {products.map(product =>{
+
           return(
             <Link key={product.id} href={`product/${product.id}`}>
             <p key={product.id}>{product.title}</p></Link>
           )
+
+        })} */}
+      </div>
+
         })}
       </div>
+
+
        
-      <LandingPage />
+      <LandingPage products={products} collections={collections} />
+
+      
 
     </div>
   );
+
     
 
-    <div className={styles.container}>
-    
       <Navigation />
       <LandingPage />
 
       <Login />
       <Checkout />
-
+      <NewAccount />
       <Footer />
   
 
     </div>
+
+
 
    
 }
@@ -66,13 +83,18 @@ export default function Home({products}) {
 export async function getServerSideProps() {
   // Fetch data from external API
   const products = await client.product.fetchAll()
+  const collectionId = 'Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzI4NzU5OTc4ODI0OQ=='
+  const collections = await client.collection.fetchWithProducts(collectionId)
   
   
 
   // Pass data to the page via props
-  return { props: { products: JSON.parse(JSON.stringify(products)) } }
+  return { props: 
+    { products: JSON.parse(JSON.stringify(products)),
+    collections:JSON.parse(JSON.stringify(collections))
+    },}
+  
 }
     
      
-
 
