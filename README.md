@@ -1,4 +1,4 @@
-<h1>The Jet Set</h1>
+<h1>The Jet Set -- (in progress in Dev Branch)</h1> 
 <h4>Front End</h4>
 
 <h3>Tech Stack</h3>  
