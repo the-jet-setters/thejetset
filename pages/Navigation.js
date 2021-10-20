@@ -10,7 +10,7 @@ function Navigation(props) {
             <div className="header">
                 <ul>
                     <li>
-                        <Link href="/LandingPage">
+                        <Link href="/">
                         <a>The Jet Setters</a>
                         </Link>
         <div className="iconDirectories">
@@ -50,6 +50,11 @@ function Navigation(props) {
                     <li>
                         <Link href="/ReadyToWear">
                         <a>READY TO WEAR</a>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/AllProducts">
+                        <a>All PRODUCTS</a>
                         </Link>
                     </li>
                 </ul> 

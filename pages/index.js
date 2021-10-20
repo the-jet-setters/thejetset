@@ -29,14 +29,14 @@ export default function Home({products,collections}) {
      <div className='container'>
 
      </div>
-     <div>
+     {/* <div>
         {products.map(product =>{
           return(
             <Link key={product.id} href={`product/${product.id}`}>
             <p key={product.id}>{product.title}</p></Link>
           )
         })}
-      </div>
+      </div> */}
 
        
       <LandingPage products={products} collections={collections} />
