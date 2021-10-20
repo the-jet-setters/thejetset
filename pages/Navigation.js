@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { FaHeart } from 'react-icons/fa';
+import { FaShoppingCart } from 'react-icons/fa';
+import { FaUser } from 'react-icons/fa';
 
 
 function Navigation(props) {
@@ -11,6 +13,25 @@ function Navigation(props) {
                         <Link href="/LandingPage">
                         <a>The Jet Setters</a>
                         </Link>
+        <div className="iconDirectories">
+            <ul>
+                <li>
+                    <Link href="/Wishlist">
+                    <a><FaHeart/>Wish List</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/Login">
+                    <a><FaUser/>Sign in</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/Checkout">
+                    <a><FaShoppingCart/>Cart</a>
+                    </Link>
+                </li>
+            </ul>
+        </div>
                     </li>
                 </ul>
             </div>
@@ -33,25 +54,6 @@ function Navigation(props) {
                     </li>
                 </ul> 
             </div>
-        <div className="">
-            <ul>
-                <li>
-                    <Link href="/WishList">
-                    <a>Wish List <FaHeart/> </a>
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/Login">
-                    <a>Sign in</a>
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/Checkout">
-                    <a>Cart </a>
-                    </Link>
-                </li>
-            </ul>
-        </div>
     </div>
     );
 }
