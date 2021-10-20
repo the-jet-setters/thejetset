@@ -6,6 +6,12 @@ import Link from 'next/link'
 import React,{useEffect , useState} from "react";
 import LandingPage from './LandingPage';
 
+import Footer from './Footer';
+import Login from './Login';
+import Checkout from './Checkout';
+import NewAccount from './NewAccount';
+
+
 
 
 
@@ -30,21 +36,30 @@ export default function Home({products,collections}) {
 
      </div>
      <div>
+
+        {/* {products.map(product =>{
+
         {products.map(product =>{
+
           return(
             <Link key={product.id} href={`product/${product.id}`}>
             <p key={product.id}>{product.title}</p></Link>
           )
+
+        })} */}
+      </div>
+
         })}
       </div>
+
 
        
       <LandingPage products={products} collections={collections} />
 
+      
+
     </div>
   );
-    
-     
 
       
 
@@ -52,6 +67,19 @@ export default function Home({products,collections}) {
   
 
     
+
+      <Navigation />
+      <LandingPage />
+
+      <Login />
+      <Checkout />
+      <NewAccount />
+      <Footer />
+  
+
+    </div>
+
+
 
    
 }
