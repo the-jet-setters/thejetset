@@ -7,7 +7,7 @@ function Login(props) {
         <div>
             <Navigation />
             
-            <div className="w-full h-screen flex items-center justify-center">
+            <div className="grid grid-col-1 p-10 border border-gray-200 max-sm flex items-center justify-center">
                 <form>
                 <h3 className="text-2xl font-bold text-center mb-10">Log in</h3>
 
