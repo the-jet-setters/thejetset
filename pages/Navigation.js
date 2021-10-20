@@ -13,8 +13,11 @@ function Navigation(props) {
                         <Link href="/LandingPage">
                         <a>The Jet Setters</a>
                         </Link>
+
+                        <div className="solid"> </div>
         <div className="iconDirectories">
             <ul>
+        
                 <li>
                     <Link href="/Wishlist">
                     <a><FaHeart/>Wish List</a>
@@ -30,6 +33,7 @@ function Navigation(props) {
                     <a><FaShoppingCart/>Cart</a>
                     </Link>
                 </li>
+          
             </ul>
         </div>
                     </li>
