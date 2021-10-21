@@ -5,18 +5,11 @@ import { client } from "../utils/shopify";
 import Link from 'next/link'
 import React,{useEffect , useState} from "react";
 import LandingPage from './LandingPage';
-
+import Navigation from "./Navigation";
 import Footer from './Footer';
 import Login from './Login';
 import Checkout from './Checkout';
 import NewAccount from './NewAccount';
-
-
-
-
-
-
-
 
 
 
@@ -49,8 +42,8 @@ export default function Home({products,collections}) {
         })} */}
       </div>
 
-        })}
-      </div>
+       
+      
 
 
        
@@ -61,7 +54,7 @@ export default function Home({products,collections}) {
     </div>
   );
 
-    
+    <div>
 
       <Navigation />
       <LandingPage />
