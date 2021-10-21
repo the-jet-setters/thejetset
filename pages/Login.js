@@ -1,6 +1,8 @@
 import React from 'react';
 import Navigation from './Navigation';
 import Footer from './Footer';
+import NewAccount from './NewAccount';
+import Link from 'next/dist/client/link';
 
 function Login(props) {
     return (
@@ -12,18 +14,19 @@ function Login(props) {
                 <h3 className="text-2xl font-bold text-center mb-10">Log in</h3>
 
                     <div className="mb-6 text-center">
-                    <label className="text-sm font-medium text-gray-900 block mb-2 ">E-MAIL ADDRESS</label>
+                    <label className="text-sm font-medium text-gray-900 block mb-3">E-MAIL ADDRESS</label>
                     <input type="email" id="email" className="w-full shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm focus:ring-black-500 focus:border-black-900 w-6/12 block p-2.5" placeholder="Username" required>
                     </input>
                     </div>
                     
                     <div className="mb-6 text-center">
-                    <label className="text-sm font-medium text-gray-900 block mb-2">PASSWORD</label>
+                    <label className="text-sm font-medium text-gray-900 block mb-3">PASSWORD</label>
                     <input type="password" id="password" className="w-full shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm focus:ring-black-500 focus:border-black-500 w-6/12 block p-2.5" placeholder="Password" required>
                     </input>
                     </div>
                      
-                    <div className="flex items-start mt-7 m-12"> 
+                    
+                    <div className="flex items-start m-12"> 
                     <a href="#" className="text-sm">FORGOT PASSWORD</a>
                     </div>
                     
@@ -33,8 +36,9 @@ function Login(props) {
                     </div>
 
                     <div className="flex items-start m-12 "> 
-                    <a href="#" className="text-sm">CREATE AN ACCOUNT</a>
+                    <Link href="/NewAccount" className="text-sm">CREATE AN ACCOUNT</Link>
                     </div>
+
                 
                 </form>
             </div>
