@@ -3,6 +3,7 @@ import Navigation from './Navigation';
 import Footer from './Footer';
 import Link from 'next/link'
 import Image from 'next/image'
+import Carousel from './Carousel'
 
 
 function LandingPage({products,collections}) {
@@ -11,20 +12,21 @@ function LandingPage({products,collections}) {
     
     return (
         <div>
-            <Navigation />
+            <Navigation products={products} />
+            <Carousel/>
             
                 <div className="newCollection">
                 </div>
                 {/* New Collection Section */}
                 <div className="container mx-auto ">
-                <h1 className='font-serif text-3xl'>The New Collection</h1>
+                <h1 className='font-serif text-4xl text-center '>The New Collection</h1>
                 </div>
-                <div className='container mx-auto mt-6 mb-24'>
-                <div className='grid grid-cols-4 gap-y-10 gap-x-4'>
+                <div className='container mx-auto mt-20 mb-24'>
+                <div key={products.id} className='grid grid-cols-4 gap-y-10 gap-x-4'>
                 {collections.products.map((product) => (
                     <div key={products.id}>
             <Link key={product.id} href={`product/${product.id}`}>
- <div className="w-full aspect-w-1  hover:opacity-90 aspect-h-1 overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+ <div key={products.id} className="w-full aspect-w-1  hover:opacity-90 aspect-h-1 overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
  <Image
    src={product.images[0].src}
    alt={product.imageAlt}
@@ -49,13 +51,15 @@ function LandingPage({products,collections}) {
 
                 </div>
                 {/* Featured Collection Section */}
-                <div className="container mx-auto flex justify-between">
+                <div className="container mx-auto flex justify-between mt-60">
                 <h1 className='font-serif text-3xl font-medium'>Featured Collection</h1>
+                <Link key={products.id} href='/AllProducts'>
                 <button className='self-end underline font-serif text-2xl'>SHOP NOW</button>
+                </Link>
                 </div>
                 {/* Featured Collection Grids */}
                 <div className='container mx-auto py-5 '>
-                    <div className='grid grid-cols-4 gap-4'>
+                    <div className='grid grid-cols-4 gap-4  mb-40'>
                         <div className='bg-red-500 transform hover:scale-110 transition duration-500  text-white p-32 col-span-1.5'>
                             1
                         </div>
