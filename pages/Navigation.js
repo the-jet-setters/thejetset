@@ -29,7 +29,7 @@ function Navigation(props) {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/Checkout">
+                    <Link href="/Cart">
                     <a><FaShoppingCart/>Cart</a>
                     </Link>
                 </li>
@@ -66,6 +66,8 @@ function Navigation(props) {
 
                 </ol> 
 
+            </div>
+            <div>
             </div>
     </div>
     );
