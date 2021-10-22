@@ -12,20 +12,10 @@ import Checkout from './Checkout';
 import NewAccount from './NewAccount';
 
 
-
-
-
-
-
-
-
-
-
 export default function Home({products,collections}) {
 
   console.log({products});
   console.log({collections});
-  
   
   
   return (
@@ -35,7 +25,7 @@ export default function Home({products,collections}) {
      <div className='container'>
 
      </div>
-     <div>
+      <div>
 
         {/* {products.map(product =>{
 
@@ -48,21 +38,15 @@ export default function Home({products,collections}) {
 
         })} */}
       </div>
+    
 
-        })}
-      </div>
-
-
-       
       <LandingPage products={products} collections={collections} />
 
-      
-
+    
     </div>
   );
 
-    
-
+   <div>
       <Navigation />
       <LandingPage />
 
@@ -70,11 +54,9 @@ export default function Home({products,collections}) {
       <Checkout />
       <NewAccount />
       <Footer />
-  
-
-    </div>
 
 
+      </div>
 
    
 }
