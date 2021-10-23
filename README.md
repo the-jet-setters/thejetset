@@ -1,35 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1>The Jet Set</h1> 
+<h4>Front End</h4>
 
-## Getting Started
+<h3>Tech Stack</h3>  
+-React</br>
+-Bootstrap</br>
+-Axios</br>
+-Shopify API</br>
+-Tailwind CSS</br>
+-React-Icons</br>
 
-First, run the development server:
+<h4>Components</h4>
+Welcome Pop up modal:</br>
+  -Sign up invitation</br>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Login:</br>
+  -Username</br>
+  -Password</br>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Landing Page:</br>
+  -Welcome, About me</br>
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Home:
+  -Logo</br>
+  -Ad campaign image (Collection) in carousel</br>
+  -Search Bar</br>
+  -Randomized recommended section</br>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Collection</br>
+		
+New Arrivals</br>
+	
+Sale:</br>
+  -Create sale rules</br>
+  
+Shopping Cart:</br>
+  -Add to cart button</br>
+  -Delete</br>
+  -Wishlist</br>
+  
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<h3>User Stories:</h3>
+-As the user, I want to be able to save an item to my wishlist and access the item later on. </br>
+-As the user, I would like to easily navigate through the e-commerce website to purchase an item by selecting the item. </br>
+-As the user, I want to browse through products by categories such as New Arrivals, seasons, sales. </br>
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+<h3>MVP goal:</h3>
+React App using Shopify API connectivity with fully functional searchability, login authentication and checkout.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
+<h3>Stretch Goal:</h3>
+- Wishlist </br>
+- Create a curated list for a client (similar to a wishlist) with functionality to send to client directly and assign to client. Client book with link to send to client directly.
