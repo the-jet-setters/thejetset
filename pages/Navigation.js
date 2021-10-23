@@ -62,13 +62,12 @@ function Navigation(props) {
                         <a>All PRODUCTS</a>
                         </Link>
                     </li>
-                </ul> 
-
-                </ol> 
+                </ol>
+                   
+         
 
             </div>
-            <div>
-            </div>
+    
     </div>
     );
 }
