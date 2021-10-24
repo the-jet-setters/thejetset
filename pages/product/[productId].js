@@ -3,10 +3,30 @@ import { client } from '../../utils/shopify'
 import Image from 'next/image'
 import Navigation from '../Navigation'
 import Footer from '../Footer'
+import { useState } from 'react'
 
-const Post = ({product}) => {
+const Post = ({product, checkout}) => {
+  console.log({checkout, product});
+  const [amount, setAmount] = useState(1)
+  const variant = product.variants[0]
   
-       
+       const addToCart = () =>{
+        const checkoutId = checkout.id; // ID of an existing checkout
+        const lineItemsToAdd = [
+          {
+            variantId: variant.id,
+            quantity: amount,
+            customAttributes: []
+          }
+        ];
+        
+        // Add an item to the checkout
+        client.checkout.addLineItems(checkoutId, lineItemsToAdd).then((checkout) => {
+          // Do something with the updated checkout
+          console.log(JSON.parse(JSON.stringify(checkout)));
+          console.log(checkout.lineItems); // Array with one additional line item
+        });
+       }
   return <div key={product.id}>
   
   <Navigation />
@@ -46,7 +66,7 @@ const Post = ({product}) => {
       </div>
         
           <div className="block">
-            <button className="w-full m-5 text-white bg-gray-900 font-medium text-2XL px-5 py-2.5 text-center">ADD TO CART</button>
+            <button onClick={addToCart} className="w-full m-5 text-white bg-gray-900 font-medium text-2XL px-5 py-2.5 text-center">ADD TO CART</button>
             <div className="flex justify-end">
             <button type="button" className="flex items-center px-2 py-1 space-x-3">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current">
@@ -75,12 +95,16 @@ export async function getServerSideProps({ query }) {
   const productId = query.productId
   // Fetch data from external API
   const product = await client.product.fetch(productId)
+  const checkout = await client.checkout.create()
   console.log({product});
   
   
 
   // Pass data to the page via props
-  return { props: { product: JSON.parse(JSON.stringify(product)) } }
+  return { props: { 
+    product: JSON.parse(JSON.stringify(product)),
+    checkout: JSON.parse(JSON.stringify(checkout))
+  } }
 }
 
 export default Post

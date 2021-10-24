@@ -62,9 +62,8 @@ function Navigation(props) {
                         <a>All PRODUCTS</a>
                         </Link>
                     </li>
-                </ul> 
-
                 </ol> 
+
 
             </div>
             <div>
