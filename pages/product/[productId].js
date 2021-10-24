@@ -9,8 +9,17 @@ const Post = ({product, checkout}) => {
   console.log({checkout, product});
   const [amount, setAmount] = useState(1)
   const variant = product.variants[0]
+  const getDataFromStorage = (key) =>{
+    const storage = window.localStorage;
+    return JSON.parse(storage.getItem(key))
+  }
+  const setDataToStorage = (key,data) =>{
+    const storage = window.localStorage;
+    //Stringify data and save in storage and when you get it you need to parse to have correct format for javascript
+    return JSON.parse(storage.setItem(key,JSON.stringify(data)))
+  }
   
-       const addToCart = () =>{
+       const addToCart = async () =>{
         const checkoutId = checkout.id; // ID of an existing checkout
         const lineItemsToAdd = [
           {
@@ -21,8 +30,9 @@ const Post = ({product, checkout}) => {
         ];
         
         // Add an item to the checkout
-        client.checkout.addLineItems(checkoutId, lineItemsToAdd).then((checkout) => {
+        client.checkout.addLineItems(checkoutId, lineItemsToAdd,).then((checkout) => {
           // Do something with the updated checkout
+          setDataToStorage('checkout', checkout)
           console.log(JSON.parse(JSON.stringify(checkout)));
           console.log(checkout.lineItems); // Array with one additional line item
         });
