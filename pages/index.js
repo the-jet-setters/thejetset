@@ -13,7 +13,6 @@ import NewAccount from './NewAccount';
 
 
 
-
 export default function Home({products,collections}) {
 
   console.log({products});

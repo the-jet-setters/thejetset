@@ -12,8 +12,11 @@ function LandingPage({products,collections}) {
     
     return (
         <div>
+
+
             <Navigation products={products} />
             <Carousel/>
+
             
                 <div className="newCollection">
                 </div>
