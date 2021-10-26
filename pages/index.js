@@ -5,6 +5,7 @@ import { client } from "../utils/shopify";
 import Link from 'next/link'
 import React,{useEffect , useState} from "react";
 import LandingPage from './LandingPage';
+// import { getProducts } from '../utils/shop'
 
 
 
@@ -17,6 +18,7 @@ export default function Home({products,collections}) {
   
   return (
 
+    
 
     <div className={styles.container}>
     
@@ -28,6 +30,7 @@ export default function Home({products,collections}) {
       
 
     </div>
+    
   );
 
    
@@ -53,5 +56,12 @@ export async function getServerSideProps() {
   
 }
     
-     
+
+// export async function getServerSideProps(){
+//   const products = await getProducts()
+
+//   return {
+//     props:{products}
+//   }
+// }
 
