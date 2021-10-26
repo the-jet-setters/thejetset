@@ -5,12 +5,7 @@ import { client } from "../utils/shopify";
 import Link from 'next/link'
 import React,{useEffect , useState} from "react";
 import LandingPage from './LandingPage';
-import Navigation from "./Navigation";
-import Footer from './Footer';
-import Login from './Login';
-import Checkout from './Checkout';
-import NewAccount from './NewAccount';
-
+// import { getProducts } from '../utils/shop'
 
 
 
@@ -23,32 +18,10 @@ export default function Home({products,collections}) {
   
   return (
 
+    
 
     <div className={styles.container}>
-     <div className='container'>
-
-     </div>
-
-     {/* <div>
-
-     <div>
-
-        {/* {products.map(product =>{
-
-
-        {products.map(product =>{
-
-          return(
-            <Link key={product.id} href={`product/${product.id}`}>
-            <p key={product.id}>{product.title}</p></Link>
-          )
-
-        })} */}
-      </div>
-
-        })}
-      </div> */}
-
+    
 
 
        
@@ -57,21 +30,10 @@ export default function Home({products,collections}) {
       
 
     </div>
+    
   );
 
-    <div>
-
-      <Navigation />
-      <LandingPage />
-
-      <Login />
-      <Checkout />
-      <NewAccount />
-      <Footer />
-  
-
-    </div>
-
+   
 
 
    
@@ -94,5 +56,12 @@ export async function getServerSideProps() {
   
 }
     
-     
+
+// export async function getServerSideProps(){
+//   const products = await getProducts()
+
+//   return {
+//     props:{products}
+//   }
+// }
 
