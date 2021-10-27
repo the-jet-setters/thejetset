@@ -23,38 +23,12 @@ export default function Home({products,collections}) {
   
   return (
 
-
     <div className={styles.container}>
      <div className='container'>
 
      </div>
-
-     {/* <div>
-
-     <div>
-
-        {/* {products.map(product =>{
-
-
-        {products.map(product =>{
-
-          return(
-            <Link key={product.id} href={`product/${product.id}`}>
-            <p key={product.id}>{product.title}</p></Link>
-          )
-
-        })} */}
-      </div>
-
-        })}
-      </div> */}
-
-
-
-       
+  
       <LandingPage products={products} collections={collections} />
-
-      
 
     </div>
   );
@@ -71,10 +45,7 @@ export default function Home({products,collections}) {
   
 
     </div>
-
-
-
-   
+  
 }
 
 // This gets called on every request

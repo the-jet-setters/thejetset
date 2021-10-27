@@ -15,27 +15,25 @@ function Navigation(props) {
                         </Link>
 
                         <div className="solid"> </div>
-        <div className="iconDirectories">
-            <ol>
-        
-                <li>
-                    <Link href="/Wishlist">
-                    <a><FaHeart/>Wish List</a>
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/Login">
-                    <a><FaUser/>Sign in</a>
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/Cart">
-                    <a><FaShoppingCart/>Cart</a>
-                    </Link>
-                </li>
-          
-            </ol>
-        </div>
+            <div className="iconDirectories">
+                <ol>
+                    <li>
+                        <Link href="/Wishlist">
+                        <a><FaHeart/>Wish List</a>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/Login">
+                        <a><FaUser/>Sign in</a>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/Cart">
+                        <a><FaShoppingCart/>Cart</a>
+                        </Link>
+                    </li>
+                </ol>
+            </div>
                     </li>
                 </ol>
             </div>
@@ -56,20 +54,17 @@ function Navigation(props) {
                         <a>READY TO WEAR</a>
                         </Link>
                     </li>
-
                     <li>
                         <Link href="/AllProducts">
                         <a>All PRODUCTS</a>
                         </Link>
                     </li>
-                </ul> 
-
                 </ol> 
-
             </div>
             <div>
             </div>
     </div>
+
     );
 }
 
