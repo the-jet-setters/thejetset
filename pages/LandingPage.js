@@ -15,14 +15,14 @@ function LandingPage({products,collections}) {
             <Navigation products={products} />
             <Carousel/>
             
-                <div className="newCollection">
+                <div >
                 </div>
                 {/* New Collection Section */}
-                <div className="container mx-auto ">
-                <h1 className='font-serif text-4xl text-center '>The New Collection</h1>
+                <div className="container mx-auto mt-24 ">
+                <h1 className='font-serif text-4xl text-center'>The New Collection</h1>
                 </div>
                 <div className='container mx-auto mt-20 mb-24'>
-                <div key={products.id} className='grid grid-cols-1 gap-y-10 gap-x-4 mx-auto lg:grid-cols-4 '>
+                <div key={products.id} className='grid grid-cols-2 gap-y-10 gap-x-4 p-5 lg:grid-cols-4 '>
                 {collections.products.map((product) => (
                     <div key={products.id}>
             <Link key={product.id} href={`product/${product.id}`}>
@@ -37,9 +37,9 @@ function LandingPage({products,collections}) {
  />
 </div>
 </Link>
-<h2 className="mt-4 text-xl font-serif text-black font-semibold tracking-wide">{product.title}</h2>
+<h2 className="mt-4 text-xl font-serif text-black font-semibold tracking-wide truncate">{product.title}</h2>
 <p className="mt-2 text-lg font-medium font-serif text-black">$ {product.variants[0].price}</p>
-<button className='w-1/2 xl:w-full bg-black text-white py-2 mt-4 font-serif hover:bg-gray-600'> ADD TO CART</button>
+<button className='w-full xl:w-full bg-black text-white py-2 mt-4 font-serif hover:bg-gray-600'>ADD TO CART</button>
 
                     </div>
                    
@@ -61,19 +61,32 @@ function LandingPage({products,collections}) {
                 {/* Featured Collection Grids */}
                 <div className='container mx-auto py-5 '>
                     <div className='grid grid-cols-4 gap-4  mb-40'>
-                        <div className='bg-red-500 transform hover:scale-110 transition duration-500  text-white p-32 col-span-1.5'>
-                            1
+                        <div className=' transform hover:scale-90 transition duration-500  text-white col-span-2'>
+                        <img
+                           src='https://images.unsplash.com/photo-1616186692359-e14c5224e4e1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1160&q=80'
+                           className='object-cover'
+                           />
                         </div>
-                        <div className='bg-blue-500 transform hover:scale-110 transition duration-500 text-white col-span-3 ml-2'>
-                         2
+                        <div className=' transform hover:scale-90 transition duration-500 text-white col-span-2 '>
+                        <img
+                           src='https://images.unsplash.com/photo-1634304669792-b774a8c9ac7f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1160&q=80'
+                           className=''
+                           />
 
                         </div>
-                        <div className='bg-purple-500 transform hover:scale-110 transition duration-500 text-white col-span-2 p-64'>
-                          3
+                        <div className=' transform hover:scale-90 transition duration-500 text-white col-span-2 '>
+                        <img
+                           src='https://images.unsplash.com/photo-1621341103818-01dada8c6ef8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1160&q=80'
+                           className='object-contain'
+                           />
 
                         </div>
-                        <div className='bg-red-500 transform hover:scale-110 transition duration-500 text-white col-span-2'>
-                           4
+                        <div className=' transform hover:scale-90 transition duration-500 text-white col-span-2'>
+                           
+                           <img
+                           src='https://images.unsplash.com/photo-1524041255072-7da0525d6b34?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1160&q=80'
+                           className='object-contain'
+                           />
 
                         </div>
                         
