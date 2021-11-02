@@ -1,16 +1,8 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
 import { client } from "../utils/shopify";
 import Link from 'next/link'
 import React,{useEffect , useState} from "react";
 import LandingPage from './LandingPage';
-import Navigation from "./Navigation";
-import Footer from './Footer';
-import Login from './Login';
-import Checkout from './Checkout';
-import NewAccount from './NewAccount';
-
+// import { getProducts } from '../utils/shop'
 
 
 
@@ -23,15 +15,26 @@ export default function Home({products,collections}) {
   
   return (
 
+
     <div className={styles.container}>
      <div className='container'>
 
      </div>
-  
+
+    
+
+    <div>
+    
+
+
+       
+
       <LandingPage products={products} collections={collections} />
 
     </div>
+    
   );
+
 
     <div>
 
@@ -65,5 +68,12 @@ export async function getServerSideProps() {
   
 }
     
-     
+
+// export async function getServerSideProps(){
+//   const products = await getProducts()
+
+//   return {
+//     props:{products}
+//   }
+// }
 
