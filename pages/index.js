@@ -15,6 +15,12 @@ export default function Home({products,collections}) {
   
   return (
 
+
+    <div className={styles.container}>
+     <div className='container'>
+
+     </div>
+
     
 
     <div>
@@ -22,18 +28,27 @@ export default function Home({products,collections}) {
 
 
        
-      <LandingPage products={products} collections={collections} />
 
-      
+      <LandingPage products={products} collections={collections} />
 
     </div>
     
   );
 
-   
 
+    <div>
 
-   
+      <Navigation />
+      <LandingPage />
+
+      <Login />
+      <Checkout />
+      <NewAccount />
+      <Footer />
+  
+
+    </div>
+  
 }
 
 // This gets called on every request
