@@ -14,7 +14,7 @@ function AllProducts({products}) {
                      <div className='font-serif text-2xl mt-10 mb-10 text-center'>
                            ALL PRODUCTS
                      </div>
-                <div className='grid grid-cols-4 gap-y-10 gap-x-4'>
+                <div className='grid grid-cols-2 gap-y-10 gap-x-4 p-5 xl:grid-cols-4 mx-auto'>
                 {products.map((product) => (
                     <div key={products.id}>
             <Link key={product.id} href={`product/${product.id}`}>
