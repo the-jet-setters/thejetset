@@ -1,14 +1,41 @@
 import React from 'react';
 import Navigation from './Navigation';
 import Footer from './Footer';
-import Link from 'next/link'
-import Image from 'next/image'
-import Carousel from './Carousel'
+import Link from 'next/link';
+import Image from 'next/image';
+import Carousel from './Carousel';
+import { client } from '../utils/shopify'
 
 
 function LandingPage({products,collections}) {
-    console.log({products})
+    // console.log({products})
     console.log(collections.products)
+    // const variant = collections.products.map((products))
+
+    const addToCart = async () =>{
+        const storage = window.localStorage
+        let checkoutId = storage.getItem('checkoutId')
+         if(!checkoutId){
+               const checkout = await client.checkout.create()
+               checkoutId = checkout.id
+             }
+             storage.setItem('checkoutId',checkoutId)
+         // let checkoutId = checkout.id; // ID of an existing checkout
+         const lineItemsToAdd = [
+           {
+             variantId: variant.id,
+             customAttributes: []
+           }
+         ];
+         
+         // Add an item to the checkout
+         client.checkout.addLineItems(checkoutId, lineItemsToAdd,).then((checkout) => {
+           // Do something with the updated checkout
+           setDataToStorage('checkout', checkout)
+           console.log(JSON.parse(JSON.stringify(checkout)));
+           console.log(checkout.lineItems); // Array with one additional line item
+         });
+        }
     
     return (
         <div>
@@ -39,7 +66,7 @@ function LandingPage({products,collections}) {
 </Link>
 <h2 className="mt-4 text-xl font-serif text-black font-semibold tracking-wide truncate">{product.title}</h2>
 <p className="mt-2 text-lg font-medium font-serif text-black">$ {product.variants[0].price}</p>
-<button className='w-full xl:w-full bg-black text-white py-2 mt-4 font-serif hover:bg-gray-600'>ADD TO CART</button>
+<button onClick={ addToCart } className='w-full xl:w-full bg-black text-white py-2 mt-4 font-serif hover:bg-gray-600'>ADD TO CART</button>
 
                     </div>
                    
@@ -53,14 +80,14 @@ function LandingPage({products,collections}) {
                 </div>
                 {/* Featured Collection Section */}
                 <div className="container mx-auto flex justify-between mt-60">
-                <h1 className='font-serif text-3xl font-medium'>Featured Collection</h1>
+                <h1 className='font-serif text-xl font-medium p-3 md:text-2xl '>Featured Collection</h1>
                 <Link key={products.id} href='/AllProducts'>
-                <button className='self-end underline font-serif text-2xl'>SHOP NOW</button>
+                <button className='self-end underline font-serif text-xl p-3 md:text-2xl'>SHOP NOW</button>
                 </Link>
                 </div>
                 {/* Featured Collection Grids */}
-                <div className='container mx-auto py-5 '>
-                    <div className='grid grid-cols-4 gap-4  mb-40'>
+                <div className='container mx-auto '>
+                    <div className='grid grid-cols-4 gap-4 mb-40 p-3'>
                         <div className=' transform hover:scale-90 transition duration-500  text-white col-span-2'>
                         <img
                            src='https://images.unsplash.com/photo-1616186692359-e14c5224e4e1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1160&q=80'

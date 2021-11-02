@@ -54,11 +54,4 @@ export async function getServerSideProps() {
 }
     
 
-// export async function getServerSideProps(){
-//   const products = await getProducts()
-
-//   return {
-//     props:{products}
-//   }
-// }
 
