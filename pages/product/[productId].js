@@ -139,7 +139,7 @@ const Post = ({product,checkout}) => {
     </div>
   </section>
 
-  <Footer />
+  <Footer/>
   
   </div>
 }

@@ -22,15 +22,20 @@ storeage.setItem(key, JSON.stringify(data))
 }
 
 function Cart(props) {
-  const [checkout, setCheckout] = useState();
+  const [checkout, setCheckout] = useState(null);
 
     useEffect(() => {
-	    
-	const checkout = getDataFromStorage("checkout",checkout);
-	client.checkout.fetch(checkout.id).then((checkout) =>{
+	if(typeof window !=='undefined'){
 
-		setCheckout(checkout);
-	})
+		const checkout = getDataFromStorage("checkout",checkout);
+		if(checkout){
+
+			client.checkout.fetch(checkout.id).then((response) =>{
+		
+				setCheckout(response);
+			})
+		}
+	}   
 
 
 			
@@ -219,6 +224,5 @@ function Cart(props) {
     
 
 }
-
 
 export default Cart;
