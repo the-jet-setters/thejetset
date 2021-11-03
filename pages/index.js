@@ -12,31 +12,21 @@ export default function Home({products,collections}) {
   console.log({collections});
   
   
-  
   return (
 
-    
 
     <div>
+        <div className='container'></div>
+        <LandingPage products={products} collections={collections} />
     
-
-
-       
-      <LandingPage products={products} collections={collections} />
-
-      
-
     </div>
     
   );
 
-   
-
-
-   
+  
 }
 
-// This gets called on every request
+{/* // This gets called on every request */}
 export async function getServerSideProps() {
   // Fetch data from external API
   const products = await client.product.fetchAll()
@@ -52,6 +42,3 @@ export async function getServerSideProps() {
     },}
   
 }
-    
-
-
